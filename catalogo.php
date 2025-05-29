@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 
 <!DOCTYPE html>
 <html lang="es">
@@ -39,6 +43,26 @@
 </head>
 <body>
 
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.php">Inicio</a></li>
+            <li><a href="catalogo.php">Catálogo</a></li>
+            <li><a href="carrito.php">Carrito</a></li>
+            <li><a href="contacto.php">Contacto</a></li>
+            <li>
+                <?php if (isset($_SESSION['nombre'])): ?>
+                    <span>Bienvenido, <?php echo htmlspecialchars($_SESSION['nombre']); ?></span>
+                    <a href="logout.php">Cerrar sesión</a>
+                <?php else: ?>
+                    <a href="login.php">Ingreso</a>
+                <?php endif; ?>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
 <style>
 .breadcrumb {
   background-color: #0F1C2E;
@@ -56,17 +80,17 @@
 }
 </style>
 
-<div class="breadcrumb"><a href="index.html">Inicio</a> &gt; <span>Catálogo</span></div>
+<div class="breadcrumb"><a href="index.php">Inicio</a> &gt; <span>Catálogo</span></div>
   <header class="navbar">
     <h1 class="logo">Yessman</h1>
     <nav class="nav-links">
-      <a href="index.html">Inicio</a>
-      <a href="catalogo.html">Catálogo</a>
-      <a href="ofertas.html">Ofertas</a>
-      <a href="fragancias.html">Fragancias</a>
+      <a href="index.php">Inicio</a>
+      <a href="catalogo.php">Catálogo</a>
+      <a href="ofertas.php">Ofertas</a>
+      <a href="fragancias.php">Fragancias</a>
       <a href="contacto.php">Contacto</a>
       <a href="registro.php">Registro</a>
-      <a href="carrito.html">Carrito</a>
+      <a href="carrito.php">Carrito</a>
     </nav>
     <div id="cart-count"></div>
   </header>

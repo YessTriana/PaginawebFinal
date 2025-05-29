@@ -1,11 +1,12 @@
 <?php
 $host = "localhost";
-$db = "yessman_db";
-$user = "root";
-$pass = "Jaztri20.";
+$usuario = "root";
+$contrasena = "";
+$base_de_datos = "yessman_db";
 
-$conn = new mysqli($host, $user, $pass, $db);
-if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
+$conexion = new mysqli($host, $usuario, $contrasena, $base_de_datos);
+
+if ($conexion->connect_error) {
+    die("Conexión fallida: " . $conexion->connect_error);
 }
 ?>

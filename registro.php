@@ -107,10 +107,10 @@ footer {
 <header class="navbar">
   <h1 class="logo">Yessman</h1>
   <nav class="nav-links">
-    <a href="index.html">Inicio</a>
-    <a href="catalogo.html">Catálogo</a>
-    <a href="ofertas.html">Ofertas</a>
-    <a href="fragancias.html">Fragancias</a>
+    <a href="index.php">Inicio</a>
+    <a href="catalogo.php">Catálogo</a>
+    <a href="ofertas.php">Ofertas</a>
+    <a href="fragancias.php">Fragancias</a>
     <a href="contacto.php">Contacto</a>
     <a href="registro.php">Registro</a>
   </nav>
